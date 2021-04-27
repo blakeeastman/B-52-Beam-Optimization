@@ -1,0 +1,15 @@
+[package]
+name = "beam_optimizing_code"
+version = "0.1.0"
+authors = ["StarConquest <40275402+StarConquest@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rsgenetic ="1.8.1"
+duplicate = "0.2.9"
+rand = "0.8.3"
+float-ord ="0.3.1"
+strum = "0.20.0"
+strum_macros = "0.20.1"
