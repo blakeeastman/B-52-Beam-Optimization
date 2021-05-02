@@ -62,7 +62,7 @@ fn score(
         false => -i64::MAX / 10,
     };
     let weightcontrib = match weight < WEIGHT_MAX {
-        true => weight as i64,
+        true => -weight as i64,
         false => -i64::MAX / 10,
     };
     let costcontrib = match cost < PRICE_MAX {
@@ -70,7 +70,7 @@ fn score(
         false => -i64::MAX / 10,
     };
     let factorcontrib = match factor_of_safety < FOS_MAX && factor_of_safety > FOS_MIN {
-        true => 0 as i64,
+        true => factor_of_safety*WEIGHT_MAX as i64,
         false => -i64::MAX / 10,
     };
     let deflectioncontrib = match deflection < DEFLECTION_MAX && deflection > -DEFLECTION_MAX {
